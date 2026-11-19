@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>살롱드아이 SALON DE EYE | 울산 남구 속눈썹연장 · 속눈썹펌 · 브로우펌 · 왁싱</title>
+<meta name="description" content="since 2019 살롱드아이. 모든 눈매 맞춤 전문, 속눈썹(일반/LED/펌) · 왁싱 · 브로우펌 · 코코리젠. 야간 · 일요일 예약 가능. 울산 남구 삼산로241번길 45 2층." />
+<link rel="canonical" href="https://salon-de-eye-sample.lgt3232.workers.dev/" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:site_name" content="살롱드아이" />
+<meta property="og:title" content="SALON DE EYE · 살롱드아이" />
+<meta property="og:description" content="모든 눈매 맞춤 전문 · 속눈썹 연장 · 속눈썹펌 · 브로우펌 · 울산 남구" />
+<meta property="og:url" content="https://salon-de-eye-sample.lgt3232.workers.dev/" />
+<meta property="og:image" content="https://salon-de-eye-sample.lgt3232.workers.dev/og-sd.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#F8F3EF" />
+<link rel="icon" href="favicon.png" type="image/png" />
+<!-- 시안 도메인 = salon-de-eye-sample.lgt3232.workers.dev. 고객 인계 시 grep lgt3232 → canonical·og:url·og:image·JSON-LD url/image 치환 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "살롱드아이",
+  "alternateName": "SALON DE EYE",
+  "url": "https://salon-de-eye-sample.lgt3232.workers.dev/",
+  "image": "https://salon-de-eye-sample.lgt3232.workers.dev/og-sd.jpg",
+  "telephone": "+82-507-1347-7860",
+  "address": { "@type": "PostalAddress", "streetAddress": "삼산로241번길 45 2층", "addressLocality": "남구", "addressRegion": "울산광역시", "addressCountry": "KR" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "15:00", "closes": "22:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "10:00", "closes": "23:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "15:00" }
+  ],
+  "sameAs": ["https://www.instagram.com/salon_de_eye_official/", "https://blog.naver.com/minju7860", "https://m.place.naver.com/place/1115108261/home"]
+}
+</script>
+<style>
+@font-face{ font-family:"SD Jost"; font-weight:300 500; font-display:swap; src:url("sd-jost.woff2") format("woff2"); }
+@font-face{ font-family:"SD Sans"; font-weight:300 700; font-display:swap; src:url("sd-pretendard.woff2") format("woff2"); }
+:root{
+  --bg:#F8F3EF;
+  --card:#FFFFFF;
+  --ink:#2A2522;
+  --soft:#5E5550;
+  --mute:#6F6660;
+  --acc:#7D5D4F;
+  --line:#E8DED6;
+  --r:2px;
+  --geo:"SD Jost","SD Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --sans:"SD Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; scroll-padding-top:116px; -webkit-text-size-adjust:100%; }
+body{ font-family:var(--sans); color:var(--ink); background:var(--bg); line-height:1.75; font-size:16px; -webkit-font-smoothing:antialiased; word-break:keep-all; overflow-wrap:break-word; }
+img{ max-width:100%; height:auto; display:block; }
+a{ color:inherit; }
+:focus-visible{ outline:2px solid var(--ink); outline-offset:3px; }
+.wrap{ width:min(100% - 40px, 1140px); margin-inline:auto; }
+.nw{ white-space:nowrap; }
+
+/* 헤더 */
+.top{ position:sticky; top:0; z-index:50; background:var(--bg); border-bottom:1px solid var(--line); }
+.top .bar{ display:flex; align-items:center; justify-content:space-between; gap:16px; height:66px; }
+.brand{ display:flex; align-items:center; gap:10px; text-decoration:none; }
+.brand img{ width:34px; height:34px; }
+.brand b{ font-family:var(--geo); font-weight:400; font-size:1.02rem; letter-spacing:.28em; white-space:nowrap; }
+.nav{ display:none; gap:28px; font-size:.92rem; }
+.nav a{ text-decoration:none; color:var(--soft); }
+.top .btn{ min-height:40px; padding:0 18px; font-size:.86rem; }
+.snav{ display:flex; gap:2px; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; border-top:1px solid var(--line); padding:0 12px; }
+.snav::-webkit-scrollbar{ display:none; }
+.snav a{ flex:0 0 auto; display:flex; align-items:center; min-height:44px; padding:0 12px; font-size:.9rem; text-decoration:none; color:var(--soft); white-space:nowrap; }
+.snav a:first-child{ margin-left:auto; } .snav a:last-child{ margin-right:auto; }
+@media (min-width:900px){ .nav{ display:flex; } .snav{ display:none; } html{ scroll-padding-top:74px; } .top .bar{ display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); } .top .bar .btn{ justify-self:end; } }
+@media (max-width:899.98px){ .top .btn{ display:none; } }
+@media (hover:hover){ .nav a:hover, .snav a:hover{ color:var(--ink); } }
+
+/* 버튼 */
+.btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:50px; padding:0 24px; border-radius:var(--r); text-decoration:none; font-weight:600; font-size:.95rem; color:var(--ink); background:transparent; border:1px solid var(--ink); transition:transform .1s, background-color .2s, color .2s; }
+.btn.fill{ background:var(--ink); color:var(--bg); }
+.btn:active{ transform:scale(.98); }
+@media (hover:hover){ .btn:hover{ background:var(--ink); color:var(--bg); } .btn.fill:hover{ background:var(--acc); border-color:var(--acc); } }
+
+/* 공통 */
+.sec{ padding:104px 0; }
+.sec.alt{ background:var(--card); }
+h2{ font-family:var(--geo); font-weight:300; font-size:clamp(2.2rem, 6.4vw, 3.4rem); line-height:1.1; letter-spacing:.06em; }
+.sub-ko{ margin-top:12px; font-size:1.02rem; font-weight:600; color:var(--acc); }
+
+/* 히어로 */
+.hero{ padding:44px 0 88px; }
+.hero .wrap{ display:grid; gap:40px; align-items:center; }
+.hero .mark{ width:84px; height:84px; }
+.hero .since{ margin-top:22px; font-family:var(--geo); font-size:.95rem; letter-spacing:.2em; color:var(--acc); }
+.hero h1{ margin-top:8px; font-family:var(--geo); font-weight:300; font-size:clamp(2.4rem, 8.6vw, 4.4rem); line-height:1.05; letter-spacing:.1em; }
+.hero h1 small{ display:block; margin-top:12px; font-size:1rem; font-weight:400; letter-spacing:.18em; color:var(--soft); }
+.hero .tag{ margin-top:26px; font-size:clamp(1.15rem, 3.6vw, 1.4rem); font-weight:600; letter-spacing:-.01em; }
+.hero .svc{ margin-top:8px; color:var(--soft); }
+.hero .night{ display:inline-block; margin-top:18px; padding:6px 12px; border:1px solid var(--line); border-radius:var(--r); background:var(--card); font-size:.9rem; font-weight:500; }
+.cta3{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; margin-top:28px; max-width:500px; }
+.cta3 .btn:first-child{ grid-column:1 / -1; }
+@media (max-width:439.98px){ .cta3{ grid-template-columns:minmax(0,1fr); } }
+.hero figure{ margin:0; }
+.hero figure img{ width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:var(--r); }
+@media (min-width:900px){ .hero{ padding:72px 0 112px; } .hero .wrap{ grid-template-columns:minmax(0,1fr) minmax(0,1.05fr); gap:72px; } }
+
+/* 소개 */
+.about .wrap{ display:grid; gap:40px; }
+.about .quote{ margin-top:14px; font-size:clamp(1.25rem, 3.8vw, 1.6rem); font-weight:600; line-height:1.55; letter-spacing:-.01em; }
+.about .body{ margin-top:22px; color:var(--soft); }
+.about .body2{ color:var(--soft); }
+.creds{ list-style:none; border-top:1px solid var(--ink); }
+.creds li{ padding:16px 0; border-bottom:1px solid var(--line); font-weight:500; }
+@media (min-width:900px){ .about .wrap{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:72px; align-items:start; } }
+
+/* 속눈썹 갤러리 */
+.gal{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:8px; margin-top:40px; }
+.gal figure{ margin:0; overflow:hidden; border-radius:var(--r); aspect-ratio:1/1; background:var(--line); }
+.gal img{ width:100%; height:100%; object-fit:cover; }
+.gal figure:first-child{ grid-column:1 / -1; aspect-ratio:2/1; position:relative; }
+.gal figure:first-child img{ position:absolute; inset:0; }
+@media (min-width:768px){ .gal{ grid-template-columns:repeat(3, minmax(0,1fr)); gap:12px; } .gal figure:first-child{ grid-column:auto; aspect-ratio:1/1; } }
+
+/* 가격 */
+.menu{ display:grid; grid-template-columns:minmax(0,1fr); gap:16px; margin-top:40px; align-items:start; }
+.mcard{ background:var(--card); border:1px solid var(--line); border-radius:var(--r); padding:26px 22px; }
+.sec.alt .mcard{ background:var(--bg); }
+.mcard h3{ display:flex; align-items:baseline; flex-wrap:wrap; gap:4px 10px; }
+.mcard h3 b{ font-family:var(--geo); font-weight:400; font-size:1.45rem; letter-spacing:.08em; }
+.mcard h3 small{ font-size:.88rem; font-weight:500; color:var(--mute); }
+.mcard .sub-h{ margin-top:16px; font-size:.85rem; font-weight:600; color:var(--acc); }
+.mcard ul{ list-style:none; margin-top:10px; }
+.mcard li{ display:flex; justify-content:space-between; align-items:baseline; gap:12px; padding:11px 0; border-bottom:1px dashed var(--line); }
+.mcard li:last-child{ border-bottom:0; }
+.mcard li span{ min-width:0; }
+.mcard li b{ font-weight:600; white-space:nowrap; font-variant-numeric:tabular-nums; }
+.mcard li b.v{ font-weight:500; color:var(--mute); }
+@media (min-width:900px){ .menu{ grid-template-columns:repeat(3, minmax(0,1fr)); } }
+.menu-note{ margin-top:20px; color:var(--soft); font-size:.92rem; }
+
+/* 예약 안내 */
+.book .wrap{ display:grid; gap:36px; }
+.book .lead{ margin-top:18px; color:var(--soft); max-width:30em; }
+.notes{ display:grid; gap:12px; }
+.notes div{ padding:22px; background:var(--card); border:1px solid var(--line); border-radius:var(--r); }
+.notes b{ display:block; font-size:.95rem; font-weight:600; color:var(--acc); }
+.notes p{ margin-top:8px; color:var(--soft); }
+.book .row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+@media (max-width:439.98px){ .book .row .btn, .visit .row .btn{ flex:1 1 100%; } }
+@media (min-width:900px){ .book .wrap{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:72px; align-items:start; } }
+
+/* 오시는 길 */
+.visit .wrap{ display:grid; gap:40px; }
+.info{ margin-top:28px; border-top:1px solid var(--ink); }
+.info div{ display:grid; grid-template-columns:84px minmax(0,1fr); gap:12px; padding:16px 0; border-bottom:1px solid var(--line); }
+.info dt{ font-size:.88rem; font-weight:600; color:var(--mute); padding-top:2px; }
+.info dd{ font-size:.97rem; }
+.info dd p + p{ margin-top:6px; }
+.info .em{ font-weight:600; }
+.hours{ list-style:none; }
+.hours li{ display:flex; gap:14px; }
+.hours li b{ font-weight:500; min-width:1.6em; }
+.visit .row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; }
+.map{ width:100%; height:280px; border:0; border-radius:var(--r); background:var(--line); display:block; }
+@media (min-width:900px){ .visit .wrap{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:64px; align-items:start; } .map{ height:100%; min-height:560px; } }
+
+/* 푸터 */
+.foot{ background:var(--card); padding:56px 0 120px; font-size:.88rem; color:var(--soft); border-top:1px solid var(--line); }
+.foot .brand{ margin-bottom:18px; color:var(--ink); }
+.foot p + p{ margin-top:6px; }
+@media (min-width:900px){ .foot{ padding-bottom:56px; } }
+
+/* 모바일 하단 바 */
+.quick{ position:fixed; left:0; right:0; bottom:0; z-index:60; display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:6px; padding:8px 10px calc(8px + env(safe-area-inset-bottom)); background:var(--bg); border-top:1px solid var(--line); }
+.quick a{ display:flex; align-items:center; justify-content:center; min-height:48px; border-radius:var(--r); font-size:.86rem; font-weight:600; text-decoration:none; text-align:center; border:1px solid var(--ink); }
+.quick a.fill{ background:var(--ink); color:var(--bg); }
+@media (min-width:900px){ .quick{ display:none; } }
+
+/* 나타나기 */
+.js .reveal{ opacity:0; transform:translateY(18px); transition:opacity .7s ease var(--d,0s), transform .7s ease var(--d,0s); }
+.js .reveal.in{ opacity:1; transform:none; }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="SALON DE EYE 처음으로"><img src="sd-mark.svg" alt="" width="34" height="34" /><b>SALON DE EYE</b></a>
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="#about">소개</a>
+      <a href="#lash">속눈썹</a>
+      <a href="#price">가격</a>
+      <a href="#booking">예약 안내</a>
+      <a href="#visit">오시는 길</a>
+    </nav>
+    <a class="btn fill" href="https://m.place.naver.com/place/1115108261/ticket" target="_blank" rel="noopener">네이버 예약</a>
+  </div>
+  <nav class="snav" aria-label="섹션 바로가기">
+    <a href="#about">소개</a>
+    <a href="#lash">속눈썹</a>
+    <a href="#price">가격</a>
+    <a href="#booking">예약 안내</a>
+    <a href="#visit">오시는 길</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero" aria-label="살롱드아이">
+    <div class="wrap">
+      <div>
+        <img class="mark" src="sd-mark.svg" alt="" width="84" height="84" />
+        <p class="since">since 2019</p>
+        <h1>SALON<br />DE EYE<small>Total beauty shop · 살롱드아이</small></h1>
+        <p class="tag">모든 눈매 맞춤 전문</p>
+        <p class="svc">속눈썹(일반/LED/펌) | 왁싱 | 브로우펌 | 코코리젠 | 수강</p>
+        <p class="night">야간 · 일요일 예약 가능</p>
+        <div class="cta3">
+          <a class="btn fill" href="https://m.place.naver.com/place/1115108261/ticket" target="_blank" rel="noopener">네이버 예약</a>
+          <a class="btn" href="tel:050713477860">전화 <span class="nw">0507-1347-7860</span></a>
+          <a class="btn" href="https://www.instagram.com/salon_de_eye_official/" target="_blank" rel="noopener">인스타그램 DM</a>
+        </div>
+      </div>
+      <figure>
+        <img src="sd-hero.webp" alt="L플러스컬 속눈썹 연장 후 눈매" width="1000" height="1000" fetchpriority="high" />
+      </figure>
+    </div>
+  </section>
+
+  <section class="sec alt about" id="about" aria-labelledby="about-h">
+    <div class="wrap">
+      <div>
+        <h2 id="about-h" class="reveal">About</h2>
+        <p class="body reveal">8년차 살롱드아이 원장 입니다</p>
+        <p class="body2 reveal">성남동에서 부터, 달동 까지 많은 단골 고객님들을 유지하며</p>
+        <p class="quote reveal">시술 유지력+꼼꼼함+안전성 <span class="nw">이 3가지를</span> 늘 유의하며 영업중입니다</p>
+      </div>
+      <ul class="creds">
+        <li class="reveal">미용전문학사 수료 , 8년차 시술 경력</li>
+        <li class="reveal">국가종합면허•미용전문학사수료</li>
+        <li class="reveal">유/무쌍커풀, 직모 등 맞춤디자인</li>
+        <li class="reveal">이물감 없는 깃털연장+모근보호기법</li>
+        <li class="reveal">피부 전문가 원장님이 시술하는 저자극 왁싱</li>
+        <li class="reveal">래쉬애딕트 공식판매점</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="lash" aria-labelledby="lash-h">
+    <div class="wrap">
+      <h2 id="lash-h" class="reveal">Lash</h2>
+      <p class="sub-ko reveal">속눈썹(일반/LED/펌)</p>
+      <div class="gal">
+        <figure class="reveal"><img src="sd-g1.webp" alt="CC컬 라이트브라운 연장 직후 눈매" width="700" height="700" loading="lazy" /></figure>
+        <figure class="reveal"><img src="sd-g2.webp" alt="자연스러운 속눈썹 연장 눈매" width="655" height="655" loading="lazy" /></figure>
+        <figure class="reveal"><img src="sd-g3.webp" alt="JC컬 꼬리 포인트 연장 눈매" width="700" height="700" loading="lazy" /></figure>
+        <figure class="reveal"><img src="sd-g4.webp" alt="속눈썹 연장 후 눈매" width="700" height="700" loading="lazy" /></figure>
+        <figure class="reveal"><img src="sd-g5.webp" alt="볼륨 있는 속눈썹 연장 눈매" width="700" height="700" loading="lazy" /></figure>
+        <figure class="reveal"><img src="sd-g6.webp" alt="CC컬 브라운 래쉬 연장 눈매" width="700" height="700" loading="lazy" /></figure>
+        <figure class="reveal"><img src="sd-g7.webp" alt="JC컬 자연스러운 디자인 연장 눈매" width="700" height="700" loading="lazy" /></figure>
+        <figure class="reveal"><img src="sd-g8.webp" alt="포인트 특수컬과 브라운 조합 연장 눈매" width="700" height="700" loading="lazy" /></figure>
+        <figure class="reveal"><img src="sd-g9.webp" alt="C컬 연장 후 마스크 위 눈매" width="700" height="700" loading="lazy" /></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec alt" id="price" aria-labelledby="price-h">
+    <div class="wrap">
+      <h2 id="price-h" class="reveal">Price</h2>
+      <div class="menu">
+        <article class="mcard reveal">
+          <h3><b>Extension</b><small>속눈썹 연장</small></h3>
+          <ul>
+            <li><span>CC컬/L플러스컬 속눈썹연장</span><b>60,000원</b></li>
+            <li><span>JC컬/C컬 속눈썹연장</span><b>50,000원</b></li>
+            <li><span>언더 속눈썹연장(LED)</span><b>20,000원</b></li>
+            <li><span>LED로 지속력 up</span><b>80,000원</b></li>
+          </ul>
+        </article>
+        <article class="mcard reveal">
+          <h3><b>Perm</b><small>속눈썹펌</small></h3>
+          <ul>
+            <li><span>속눈썹펌</span><b>40,000원</b></li>
+            <li><span>속눈썹 복구펌 + 앰플케어</span><b>50,000원</b></li>
+            <li><span>브로우리프트펌</span><b>35,000원</b></li>
+            <li><span>언더 속눈썹펌</span><b>30,000원</b></li>
+          </ul>
+        </article>
+        <article class="mcard reveal">
+          <h3><b>Night &amp; More</b><small>야간 · 기타</small></h3>
+          <p class="sub-h">야간비용</p>
+          <ul>
+            <li><span>21시 부터 야간비용 추가</span><b>+5,000원</b></li>
+            <li><span>야간 22시는 1만원 추가</span><b>+10,000원</b></li>
+          </ul>
+          <p class="sub-h">기타</p>
+          <ul>
+            <li><span>왁싱 / 코코리젠</span><b class="v">변동</b></li>
+            <li><span>래쉬애딕트 공식판매점</span><b>138,000원</b></li>
+          </ul>
+        </article>
+      </div>
+      <p class="menu-note reveal">네이버 플레이스 가격표 기준이에요. "변동" 항목은 상담 후 안내해 드려요.</p>
+    </div>
+  </section>
+
+  <section class="sec book" id="booking" aria-labelledby="book-h">
+    <div class="wrap">
+      <div>
+        <h2 id="book-h" class="reveal">Booking</h2>
+        <p class="sub-ko reveal">야간 · 일요일 예약 가능</p>
+        <p class="lead reveal">웨딩 본식 끝나고 신혼여행 일정이신 고객님, 정말 중요한 일정이 있으신 고객님 등 <span class="nw">시간 조율도 가능해요</span></p>
+        <div class="row reveal">
+          <a class="btn fill" href="https://m.place.naver.com/place/1115108261/ticket" target="_blank" rel="noopener">네이버 예약</a>
+          <a class="btn" href="https://www.instagram.com/salon_de_eye_official/" target="_blank" rel="noopener">인스타그램 DM</a>
+        </div>
+      </div>
+      <div class="notes">
+        <div class="reveal">
+          <b>노쇼 안내</b>
+          <p>10분 이상 지각은 노쇼로 간주합니다</p>
+          <p>다음 고객님을 위해서 늦지않게 <span class="nw">방문해주세요 :)</span></p>
+        </div>
+        <div class="reveal">
+          <b>야간비용</b>
+          <p>21시 부터 야간비용 추가 <span class="nw">5,000원</span> · 야간 22시는 <span class="nw">1만원 추가</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec alt visit" id="visit" aria-labelledby="visit-h">
+    <div class="wrap">
+      <div>
+        <h2 id="visit-h" class="reveal">Visit</h2>
+        <dl class="info reveal">
+          <div><dt>주소</dt><dd><p>울산 남구 <span class="nw">삼산로241번길 45</span> <span class="nw">2층 살롱드아이</span></p></dd></div>
+          <div><dt>찾아가는 길</dt><dd><p>남구청에서 차로 1분거리, 대현중학교 후문 쪽에 위치해있습니다.</p></dd></div>
+          <div><dt>주차</dt><dd>
+            <p class="em">주차 공간이 협소합니다!</p>
+            <p>건물 오른쪽 옆편에 자리가 없다면 <span class="nw">[거주자 구역(오후6시까지)</span> / 대현중학교 / <span class="nw">남구청]</span> 주차 가능합니다.</p>
+            <p>*글로우헤어 가게 앞 절대 주차불가 합니다*</p>
+          </dd></div>
+          <div><dt>영업시간</dt><dd>
+            <ul class="hours">
+              <li><b>월</b><span class="nw">15:00 - 22:00</span></li>
+              <li><b>화</b><span class="nw">10:00 - 23:00</span></li>
+              <li><b>수</b><span class="nw">10:00 - 23:00</span></li>
+              <li><b>목</b><span class="nw">10:00 - 23:00</span></li>
+              <li><b>금</b><span class="nw">10:00 - 23:00</span></li>
+              <li><b>토</b><span class="nw">10:00 - 19:00</span></li>
+              <li><b>일</b><span class="nw">10:00 - 15:00</span></li>
+            </ul>
+          </dd></div>
+          <div><dt>전화</dt><dd><p><a href="tel:050713477860" class="nw">0507-1347-7860</a></p></dd></div>
+        </dl>
+        <div class="row reveal">
+          <a class="btn fill" href="https://m.place.naver.com/place/1115108261/ticket" target="_blank" rel="noopener">네이버 예약</a>
+          <a class="btn" href="https://map.naver.com/p/entry/place/1115108261" target="_blank" rel="noopener">네이버 길찾기</a>
+        </div>
+      </div>
+      <iframe class="map reveal" title="살롱드아이 위치 지도" src="https://www.google.com/maps?q=%EC%9A%B8%EC%82%B0+%EB%82%A8%EA%B5%AC+%EC%82%BC%EC%82%B0%EB%A1%9C241%EB%B2%88%EA%B8%B8+45&amp;z=17&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span class="brand"><img src="sd-mark.svg" alt="" width="34" height="34" loading="lazy" /><b>SALON DE EYE</b></span>
+    <p>살롱드아이 · 울산 남구 <span class="nw">삼산로241번길 45</span> 2층 · <a href="tel:050713477860" class="nw">0507-1347-7860</a></p>
+    <p><a href="https://www.instagram.com/salon_de_eye_official/" target="_blank" rel="noopener">@salon_de_eye_official</a> · <a href="https://blog.naver.com/minju7860" target="_blank" rel="noopener">블로그</a> · <a href="https://m.place.naver.com/place/1115108261/home" target="_blank" rel="noopener" class="nw">네이버 플레이스</a></p>
+    <p>© SALON DE EYE</p>
+  </div>
+</footer>
+
+<nav class="quick" aria-label="빠른 연결">
+  <a class="fill" href="https://m.place.naver.com/place/1115108261/ticket" target="_blank" rel="noopener">네이버 예약</a>
+  <a href="tel:050713477860">전화</a>
+  <a href="https://www.instagram.com/salon_de_eye_official/" target="_blank" rel="noopener">인스타</a>
+</nav>
+
+<script>
+(function(){
+  var pending=[].slice.call(document.querySelectorAll('.reveal'));
+  pending.forEach(function(el){
+    var sib=[].slice.call(el.parentNode.children).filter(function(c){ return c.classList.contains('reveal'); });
+    if(sib.length>1){ el.style.setProperty('--d',(Math.min(sib.indexOf(el),5)*0.07)+'s'); }
+  });
+  function showAll(){ pending.forEach(function(el){ el.classList.add('in'); }); pending=[]; }
+  function start(){
+    var t=setInterval(function(){
+      if(!pending.length){ clearInterval(t); return; }
+      if(window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 4){ showAll(); return; }
+      var line=window.innerHeight*0.92;
+      pending=pending.filter(function(el){
+        if(el.getBoundingClientRect().top < line){ el.classList.add('in'); return false; }
+        return true;
+      });
+    },120);
+  }
+  var started=false; function go(){ if(started) return; started=true; start(); }
+  if(document.fonts && document.fonts.ready){ document.fonts.ready.then(go); }
+  setTimeout(go,1200);
+})();
+</script>
+</body>
+</html>
