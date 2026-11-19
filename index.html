@@ -41,6 +41,7 @@
 </script>
 <style>
 @font-face{ font-family:"SD Jost"; font-weight:300 500; font-display:swap; src:url("sd-jost.woff2") format("woff2"); }
+@font-face{ font-family:"SD Display"; font-weight:400; font-display:swap; src:url("sd-instrument.woff2") format("woff2"); }
 @font-face{ font-family:"SD Sans"; font-weight:300 700; font-display:swap; src:url("sd-pretendard.woff2") format("woff2"); }
 :root{
   --bg:#F8F3EF;
@@ -97,8 +98,8 @@ h2{ font-family:var(--geo); font-weight:300; font-size:clamp(2.2rem, 6.4vw, 3.4r
 .hero .wrap{ display:grid; gap:40px; align-items:center; }
 .hero .mark{ width:84px; height:84px; }
 .hero .since{ margin-top:22px; font-family:var(--geo); font-size:.95rem; letter-spacing:.2em; color:var(--acc); }
-.hero h1{ margin-top:8px; font-family:var(--geo); font-weight:300; font-size:clamp(2.4rem, 8.6vw, 4.4rem); line-height:1.05; letter-spacing:.1em; }
-.hero h1 small{ display:block; margin-top:12px; font-size:1rem; font-weight:400; letter-spacing:.18em; color:var(--soft); }
+.hero h1{ margin-top:8px; font-family:"SD Display","SD Sans",system-ui,-apple-system,"Segoe UI",sans-serif; font-weight:400; font-size:clamp(3.4rem, 13vw, 6.2rem); line-height:.95; letter-spacing:.01em; }
+.hero h1 small{ display:block; margin-top:16px; font-family:var(--geo); font-size:1rem; font-weight:400; line-height:1.4; letter-spacing:.18em; color:var(--soft); }
 .hero .tag{ margin-top:26px; font-size:clamp(1.15rem, 3.6vw, 1.4rem); font-weight:600; letter-spacing:-.01em; }
 .hero .svc{ margin-top:8px; color:var(--soft); }
 .hero .night{ display:inline-block; margin-top:18px; padding:6px 12px; border:1px solid var(--line); border-radius:var(--r); background:var(--card); font-size:.9rem; font-weight:500; }
@@ -215,7 +216,7 @@ h2{ font-family:var(--geo); font-weight:300; font-size:clamp(2.2rem, 6.4vw, 3.4r
       <div>
         <img class="mark" src="sd-mark.svg" alt="" width="84" height="84" />
         <p class="since">since 2019</p>
-        <h1>SALON<br />DE EYE<small>Total beauty shop · 살롱드아이</small></h1>
+        <h1>SALON<br />DE<br />EYE<small>Total beauty shop · 살롱드아이</small></h1>
         <p class="tag">모든 눈매 맞춤 전문</p>
         <p class="svc">속눈썹(일반/LED/펌) | 왁싱 | 브로우펌 | 코코리젠 | 수강</p>
         <p class="night">야간 · 일요일 예약 가능</p>
@@ -226,7 +227,7 @@ h2{ font-family:var(--geo); font-weight:300; font-size:clamp(2.2rem, 6.4vw, 3.4r
         </div>
       </div>
       <figure>
-        <img src="sd-hero.webp" alt="L플러스컬 속눈썹 연장 후 눈매" width="1000" height="1000" fetchpriority="high" />
+        <img src="sd-hero.webp" alt="속눈썹 연장 후 눈매" width="1000" height="1000" fetchpriority="high" />
       </figure>
     </div>
   </section>
@@ -259,7 +260,7 @@ h2{ font-family:var(--geo); font-weight:300; font-size:clamp(2.2rem, 6.4vw, 3.4r
         <figure class="reveal"><img src="sd-g2.webp" alt="자연스러운 속눈썹 연장 눈매" width="655" height="655" loading="lazy" /></figure>
         <figure class="reveal"><img src="sd-g3.webp" alt="JC컬 꼬리 포인트 연장 눈매" width="700" height="700" loading="lazy" /></figure>
         <figure class="reveal"><img src="sd-g4.webp" alt="속눈썹 연장 후 눈매" width="700" height="700" loading="lazy" /></figure>
-        <figure class="reveal"><img src="sd-g5.webp" alt="볼륨 있는 속눈썹 연장 눈매" width="700" height="700" loading="lazy" /></figure>
+        <figure class="reveal"><img src="sd-g5.webp" alt="L플러스컬 속눈썹 연장 후 눈매" width="700" height="700" loading="lazy" /></figure>
         <figure class="reveal"><img src="sd-g6.webp" alt="CC컬 브라운 래쉬 연장 눈매" width="700" height="700" loading="lazy" /></figure>
         <figure class="reveal"><img src="sd-g7.webp" alt="JC컬 자연스러운 디자인 연장 눈매" width="700" height="700" loading="lazy" /></figure>
         <figure class="reveal"><img src="sd-g8.webp" alt="포인트 특수컬과 브라운 조합 연장 눈매" width="700" height="700" loading="lazy" /></figure>
