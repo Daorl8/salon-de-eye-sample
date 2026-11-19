@@ -61,6 +61,7 @@ body{ font-family:var(--sans); color:var(--ink); background:var(--bg); line-heig
 img{ max-width:100%; height:auto; display:block; }
 a{ color:inherit; }
 :focus-visible{ outline:2px solid var(--ink); outline-offset:3px; }
+[tabindex="-1"]:focus{ outline:none; }
 .wrap{ width:min(100% - 40px, 1140px); margin-inline:auto; }
 .nw{ white-space:nowrap; }
 
@@ -411,7 +412,7 @@ h2{ font-family:var(--geo); font-weight:300; font-size:clamp(2.2rem, 6.4vw, 3.4r
   var started=false; function go(){ if(started) return; started=true; start(); }
   /* 히어로 글자 등장: 바로 켬(rAF 대신 setTimeout — 백그라운드 탭에서도 동작) */
   var intro=document.querySelector('.intro'); setTimeout(function(){ if(intro) intro.classList.add('on'); },60);
-  /* 부드러운 스크롤: OS '동작 줄이기'면 CSS/scrollTo smooth가 즉시 이동으로 바뀌어서 rAF로 직접 움직임 + 멈추면 즉시 이동 폴백 */
+  /* 부드러운 스크롤(R-25): OS '동작 줄이기'면 CSS smooth가 즉시 이동으로 바뀌어 rAF로 직접 움직임 · 1초 폴백 · 사용자 휠/터치면 중단 · 끝나면 대상 섹션으로 포커스 */
   document.addEventListener('click',function(e){
     var a=e.target.closest ? e.target.closest('a[href^="#"]') : null; if(!a) return;
     var id=a.getAttribute('href'); if(id.length<2) return;
@@ -421,9 +422,12 @@ h2{ font-family:var(--geo); font-weight:300; font-size:clamp(2.2rem, 6.4vw, 3.4r
     var y0=window.pageYOffset; var y1=(id==='#top') ? 0 : Math.max(0, t.getBoundingClientRect().top+y0-off);
     var dur=700, s0=null, done=false;
     function ease(p){ return p<.5 ? 4*p*p*p : 1-Math.pow(-2*p+2,3)/2; }
-    function step(ts){ if(done) return; if(s0===null) s0=ts; var p=Math.min((ts-s0)/dur,1); window.scrollTo(0, y0+(y1-y0)*ease(p)); if(p<1){ requestAnimationFrame(step); } else { done=true; } }
+    function stop(){ done=true; window.removeEventListener('wheel',stop); window.removeEventListener('touchstart',stop); }
+    function finish(){ stop(); if(!t.hasAttribute('tabindex')){ t.setAttribute('tabindex','-1'); } t.focus({preventScroll:true}); }
+    window.addEventListener('wheel',stop,{passive:true}); window.addEventListener('touchstart',stop,{passive:true});
+    function step(ts){ if(done) return; if(s0===null) s0=ts; var p=Math.min((ts-s0)/dur,1); window.scrollTo(0, y0+(y1-y0)*ease(p)); if(p<1){ requestAnimationFrame(step); } else { finish(); } }
     requestAnimationFrame(step);
-    setTimeout(function(){ if(!done){ done=true; window.scrollTo(0,y1); } }, dur+300);
+    setTimeout(function(){ if(!done){ window.scrollTo(0,y1); finish(); } }, dur+300);
     if(history.pushState){ history.pushState(null,'',id); }
   });
   if(document.fonts && document.fonts.ready){ document.fonts.ready.then(go); }
